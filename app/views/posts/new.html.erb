@@ -1,0 +1,11 @@
+<% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |msg| %>
+    <h4><%= msg %></h4>
+  <% end %>
+<% end %>
+
+<% form_with model: @post do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
