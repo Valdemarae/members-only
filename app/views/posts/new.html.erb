@@ -4,8 +4,10 @@
   <% end %>
 <% end %>
 
-<% form_with model: @post do |f| %>
+<%= form_with model: @post do |f| %>
   <%= f.label :content %>
   <%= f.text_field :content %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "Go Back", root_path %>
